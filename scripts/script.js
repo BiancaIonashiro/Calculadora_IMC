@@ -4,15 +4,19 @@ formulario.addEventListener("submit", (event) => {
   calculatorImc();
 });
 
+formulario.addEventListener("reset", (event) => {
+  limpar();
+});
+
 function calculatorImc() {
-  const genero = document.getElementById("genre").value;
-  const idade = document.getElementById("age").value;
+  // const genero = document.getElementById("genre").value;
+  //const idade = document.getElementById("age").value;
   const peso = document.getElementById("weight").value;
   const altura = document.getElementById("height").value;
-  const termoDeAceite = document.getElementById("validatorCheckbox").checked;
+  //const termoDeAceite = document.getElementById("validatorCheckbox").checked;
 
   const imc = (peso / Math.pow(altura, 2)).toFixed(2);
-  if (Number(imc) && termoDeAceite && genero) {
+  if (Number(imc) /* && termoDeAceite && idade && genero*/) {
     document.getElementById("resultImc").innerHTML = imc;
     document.getElementById("descriptionResult").innerHTML = validarImc(imc);
   }
@@ -33,10 +37,9 @@ const validarImc = (imc) => {
   return resultado;
 };
 
-function reset() {
-  const limpar = document.getElementById("clear");
-  limpar.addEventListener("reset", (event) => {
-    event.reset();
-    limpar.innerHTML = "";
-  });
+function limpar(event) {
+  document.getElementById("resultImc").innerHTML = "";
+  document.getElementById("descriptionResult").innerHTML = "";
+  const resultTag = document.getElementById("resultTag");
+  resultTag.style.backgroundColor = "#252525";
 }
