@@ -11,7 +11,6 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <script src="./scripts/script.js"></script>
   </head>
   <body>
     <header class="container-fluid" style="background-color: black">
@@ -21,7 +20,7 @@
     </header>
     <main>
       <section class="text-center" id="resultSection">
-        <h2 id="resultTag" aria->
+        <h2 id="resultTag">
           <b>RESULTADO: </b><output id="resultImc"></output>
         </h2>
         <div>
@@ -31,14 +30,14 @@
       <section class="text-center">
         <div class="d-block p-2 text-bg-warning">
           <p>Descubra qual é o seu Índice de Massa Corporal</p>
-          <form id="form">
+          <form action="">
             <ul class="list-group" id="formFieldList">
               <li>
                 <label class="form-label">Sexo</label>
                 <select class="form-select text-center" id="genre" required>
                   <option selected disabled value="">Selecione</option>
-                  <option value="feminine">Feminino</option>
-                  <option value="masculine">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="masculino">Masculino</option>
                 </select>
               </li>
               <li>
@@ -91,21 +90,8 @@
                 <p>Você deve concordar antes de continuar.</p>
               </li>
             </ul>
-            <button
-              class="btn btn-dark"
-              type="submit"
-              id="btnSubmit"
-              onclick="calculatorImc()"
-              value=""
-            >
-              CALCULAR
-            </button>
-            <button
-              class="btn btn-dark"
-              type="reset"
-              id="clearInformations"
-              onclick="clear()"
-            >
+            <button class="btn btn-dark" type="submit">CALCULAR</button>
+            <button class="btn btn-dark" type="reset" onclick="limpar.reload()">
               LIMPAR
             </button>
           </form>
@@ -118,5 +104,6 @@
         &copy; Bianca Ionashiro. All Rights Reserved
       </p>
     </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
