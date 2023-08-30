@@ -1,2 +1,2 @@
 # Calculator_IMC
-Calculadora de IMC (Índice de Massa Corporal) em HTML5, Bootstrap e JavaScript.
+Calculadora de IMC (Índice de Massa Corporal) em HTML5, CSS em Bootstrap e JavaScript.
